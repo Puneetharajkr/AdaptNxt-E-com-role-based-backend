@@ -162,32 +162,32 @@ Authorization: Bearer <your_token_here>
 
 ## 📮 Postman Collection
 
-You can import the Postman collection to test all endpoints, including success and failure scenarios.
+📥 You can import the complete Postman collection for testing all API endpoints:
 
-### 🔗 [Download Postman Collection][Uploading AdaptNxt E-Com Backend.postman_collection.json…]()
+**🔗 [Download Postman Collection – AdaptNxt E-Com Backend](./AdaptNxt%20E-Com%20Backend.postman_collection.json)**
 
-
-
+### How to Use:
 1. Open Postman → Click **Import**
-2. Select the `.postman_collection.json` file
-3. Set environment variables like:
+2. Select this file
+3. Set environment variables for:
    - `admin_token`
    - `customer_token`
+4. Each request has headers, token, and body pre-filled for easy testing
 
 ---
 
 ## 📘 API Documentation
 
-A detailed API documentation in Markdown format is also included:
+A fully detailed API documentation in Markdown format is included:
 
-### 🔗 [View API Docs](./AdaptNxt_API_Documentation.md)
+**🔗 [View Full API Docs – AdaptNxt_API_Documentation.md](./AdaptNxt_API_Documentation.md)**
 
-Includes:[Uploading AdaptNxt E-Com Backend.postman_collection.json…]()
-
-- Descriptions
-- Required headers
-- Example bodies
-- Success and failure responses
+It covers:
+- Request methods
+- Required headers and body
+- Sample success & error responses
+- Admin vs Customer behavior
+- Role-based route permissions
 
 ---
 
