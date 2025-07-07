@@ -164,7 +164,7 @@ Authorization: Bearer <your_token_here>
 
 📥 You can import the complete Postman collection for testing all API endpoints:
 
-**🔗 [Download Postman Collection – AdaptNxt E-Com Backend](./AdaptNxt%20E-Com%20Backend.postman_collection.json)**
+**🔗 [Download Postman Collection – AdaptNxt E-Com Backend](./Postman_Collection/AdaptNxt%20E-Com%20Backend.postman_collection.json)**
 
 ### How to Use:
 1. Open Postman → Click **Import**
@@ -180,7 +180,7 @@ Authorization: Bearer <your_token_here>
 
 A fully detailed API documentation in Markdown format is included:
 
-**🔗 [View Full API Docs – AdaptNxt_API_Documentation.md](./AdaptNxt_API_Documentation.md)**
+**🔗 [View Full API Docs – AdaptNxt_API_Documentation.md](./API_Documentation/AdaptNxt_API_Documentation.md)**
 
 It covers:
 - Request methods
