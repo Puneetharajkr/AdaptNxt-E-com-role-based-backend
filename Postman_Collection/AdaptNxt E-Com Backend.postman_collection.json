@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "7d8ef4cd-3f44-4ed8-ac92-4c9781f2c0b9",
+		"name": "AdaptNxt E-Com Backend or Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27448979",
+		"_collection_link": "https://user-authentication-3653.postman.co/workspace/User-Backend-Authentication~a1b15d20-7f6a-402f-9e52-6c014c8a05ee/collection/27448979-7d8ef4cd-3f44-4ed8-ac92-4c9781f2c0b9?action=share&source=collection_link&creator=27448979"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bob\",\r\n  \"email\": \"bob@example.com\",\r\n  \"password\": \"bob123\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Register API and both Customer and Admin can reqgister using this API end point"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bob@example.com\",\r\n  \"password\": \"bob123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "both Customer or User and Admin can Login using this API end point"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxODc1NTIyfQ.3bZ-_VDin5m-8VdxKRQWnhJiRbS9VDghBKMwzWrMBEs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Wrist Watch\",\r\n  \"price\": 1599,\r\n  \"category\": \"accessories\",\r\n  \"description\": \"Elegant analog watch\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "This is Add Product API, here Only Admin can add products and Admin can do all operations on this API that is product"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxODc1NTIyfQ.3bZ-_VDin5m-8VdxKRQWnhJiRbS9VDghBKMwzWrMBEs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Wrist Watch Pro\",\r\n  \"price\": 1899,\r\n  \"category\": \"accessories\",\r\n  \"description\": \"Updated elegant watch\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"4"
+					]
+				},
+				"description": "Admin can update the products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxODc1NTIyfQ.3bZ-_VDin5m-8VdxKRQWnhJiRbS9VDghBKMwzWrMBEs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"4"
+					]
+				},
+				"description": "Admin can delete the product"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUxODc1NTIyfQ.3bZ-_VDin5m-8VdxKRQWnhJiRbS9VDghBKMwzWrMBEs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Both Admin as well as Customer or User can get/read/retrive/view the list of products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"alice@example.com\",\r\n  \"password\": \"alice123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Now the Customer/User is going to Login to do his operations as Customer/User such as CART related, ORDER related"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/cart/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzUxODc1ODM4fQ.nB0ia6jSmfyMWA9Ce4D6d3kSewFJNa7P9fQoiQSizuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": 2,\r\n  \"quantity\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				},
+				"description": "Customer/User can add Prducts or Items to his CART"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzUxODc1ODM4fQ.nB0ia6jSmfyMWA9Ce4D6d3kSewFJNa7P9fQoiQSizuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Customer/User can also see/read/retrive/view the list of products as Admin can see"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzUxODc1ODM4fQ.nB0ia6jSmfyMWA9Ce4D6d3kSewFJNa7P9fQoiQSizuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart"
+					]
+				},
+				"description": "Customer/User can get/see/view the cart list/details/items"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/cart/remove",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzUxODczNTYyfQ.WKN5PY33HBpMVliD0VYeJDV-teC9hEfdDjn6pPiR3yo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/cart/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart",
+						"remove"
+					]
+				},
+				"description": "The Customer/User can Remove his Cart Items by providing his corresponding Cart id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzUxODc1ODM4fQ.nB0ia6jSmfyMWA9Ce4D6d3kSewFJNa7P9fQoiQSizuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "The Customer/User Can place the Order using Order API endpoint"
+			},
+			"response": []
+		}
+	]
+}
