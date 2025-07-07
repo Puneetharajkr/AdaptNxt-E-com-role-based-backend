@@ -164,7 +164,9 @@ Authorization: Bearer <your_token_here>
 
 You can import the Postman collection to test all endpoints, including success and failure scenarios.
 
-### 🔗 [Download Postman Collection](./AdaptNxt%20E-Com%20Backend.postman_collection.json)
+### 🔗 [Download Postman Collection][Uploading AdaptNxt E-Com Backend.postman_collection.json…]()
+
+
 
 1. Open Postman → Click **Import**
 2. Select the `.postman_collection.json` file
@@ -180,7 +182,8 @@ A detailed API documentation in Markdown format is also included:
 
 ### 🔗 [View API Docs](./AdaptNxt_API_Documentation.md)
 
-Includes:
+Includes:[Uploading AdaptNxt E-Com Backend.postman_collection.json…]()
+
 - Descriptions
 - Required headers
 - Example bodies
