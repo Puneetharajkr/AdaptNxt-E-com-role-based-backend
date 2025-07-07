@@ -229,5 +229,7 @@ If you face issues:
 
 ## 📞 Contact
 Name: Puneetharaj K R
+
 GitHub: @Puneetharajkr
+
 Email: puneetharajkr123@gmail.com
