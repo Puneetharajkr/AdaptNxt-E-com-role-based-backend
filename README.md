@@ -4,6 +4,8 @@ This is a backend API project built for the AdaptNxt E-Commerce assignment. It h
 
 ---
 
+## Live Backend Link(render): **https://adaptnxt-e-com-role-based-backend.onrender.com**
+
 ## 🚀 Tech Stack
 
 - Node.js
